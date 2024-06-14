@@ -1,0 +1,22 @@
+{% extends 'forms.html' -%}
+{% block content -%}
+
+{{ super() }}
+
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+<form action="/registrate" method="post">
+    {{ form.hidden_tag() }}
+
+    <div class="all_datas">
+        <p class="login_name">{{ form.name.label() }} {{ form.name() }}</p>
+        <p class="login_email">{{ form.email.label() }} {{ form.email() }}</p>
+        <p class="login_password">{{ form.password.label() }} {{ form.password() }}</p>
+        <p class="login_password">{{ form.second_password.label() }} {{ form.second_password() }}</p>
+        <p class="login_submit">{{ form.submit() }}</p>
+    </div>
+</form>
+
+{% endblock content -%}

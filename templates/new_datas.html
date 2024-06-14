@@ -1,0 +1,22 @@
+{% extends 'forms.html' -%}
+{% block content -%}
+
+{{ super() }}
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+<form action="/new_datas" method="post">
+    {{ form.hidden_tag() }}
+    
+    <div class="all_datas">
+        <p>{{ form.sure_name.label()}} {{ form.sure_name() }}</p>
+        <p>{{ form.age.label() }} {{ form.age() }}</p>
+        <p>{{ form.city.label() }} {{ form.city() }}</p>
+        <p>{{ form.gender.label() }} {{ form.gender() }}</p>
+        <p>{{ form.about_yourself.label() }} {{ form.about_yourself() }}</p>
+        <p>{{ form.submit() }}</p>
+    </div>
+</form>
+
+{% endblock content -%}

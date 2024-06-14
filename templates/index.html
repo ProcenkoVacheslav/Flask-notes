@@ -1,0 +1,18 @@
+{% extends 'forms.html' -%}
+{% block content -%}
+
+{{ super() }}
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+<div class="all_datas">
+    <p class="all_datas_text">Стандартное приложение "заметки", реализованное на Python с использованием микро-фреймворка Flask.
+        В котором реализован такой функционал как авторизация, регистрация, добавление заметок, выполнение 
+        и многое другое.
+    </p>
+    <p>Весь код и другие приколы тут: <a href="">GitHub</a></p>
+    <p>Связь со мной: <a href="https://t.me/creater_of_telegram_bots" target="_blank">Telegram</a></p>
+</div>
+
+{% endblock content -%}

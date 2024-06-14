@@ -1,0 +1,39 @@
+{% extends 'forms.html' -%}
+{% block content -%}
+
+{{ super() }}
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+<div class="my_notes">
+    <p style="color: yellow;">Ваши записи</p>
+    {% for note in notes -%}
+    <form action="/complite/{{note.id}}" method="post">
+        <div class="note">
+            <p class="note_text">Название: {{note.title}}</p>
+            <p class="note_text">Задача: {{note.task}}</p>
+            <p class="note_text">Дата: {{note.time}}</p>
+            <button id="complite_button" type="submit">Выполнено</button>
+        </div>
+    </form>
+    {% endfor -%}
+</div>
+
+<div id="add_button">
+    <button onclick="open_form()" class="add_note_button">+</button>
+</div>
+
+<form action="/notes" method="post">
+    {{ form.hidden_tag() }}
+
+    <div class="all_datas">
+        <p>{{ form.title.label() }} {{ form.title() }}</p>
+        <p>{{ form.task.label() }} {{ form.task() }}</p>
+        <p>{{ form.submit() }}</p>
+    </div>
+</form>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/main_js.js') }}"></script>
+
+{% endblock content -%}

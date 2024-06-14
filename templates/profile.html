@@ -1,0 +1,23 @@
+{% extends 'forms.html' -%}
+{% block content -%}
+
+{{ super() }}
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+<div class="all_datas">
+    <p class="your_datas">Ваши данные</p>
+    <ul>
+    {% for data in datas -%}
+        {% if datas[data] -%}
+            <li class="all_datas_list">{{data}} {{datas[data]}}</li>
+        {% endif -%}
+    {% endfor -%}
+    </ul>
+
+    <a href="{{ url_for('new_datas') }}" class="button">Добавить данные</a>
+    <a href="{{ url_for('logout') }}" class="submit_button">Выйти</a>
+</div>
+
+{% endblock content -%}

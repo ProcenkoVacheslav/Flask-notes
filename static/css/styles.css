@@ -1,0 +1,191 @@
+* {
+    margin: 0%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.menu {
+    padding: 1%;
+    background-color: #FF9933;
+    text-align: center;
+}
+
+.mainmenu {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+    margin: 6%;
+}
+
+.menu_a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 200%;
+    size: 50px;
+    transition: 0.2s;
+}
+
+.menu_a:hover {
+    color: rgb(226, 3, 3);
+}
+
+.all_datas {
+    border-radius: 20px;
+    border: solid, black;
+    margin: 10% 20% 20%;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 250%;
+    background-color: aqua;
+    min-width: 100px;
+}
+
+.your_datas {
+    color: yellow;
+}
+
+.all_datas_list {
+    list-style-type: none;
+    text-align: left;
+    margin: 2%;
+}
+
+#second_password, #sure_name, #age, #city, #gender, #password, #email, #name, #title {
+    margin: 3%;
+    width: 50%;
+    font-size: 70%;
+    background-color: yellow;   
+}
+
+#about_yourself, #task {
+    margin: 3%;
+    width: 70%;
+    height: 50%;
+    font-size: 70%;
+    background-color: yellow;
+}
+
+#submit, #complite_button {
+    margin: 3%;
+    padding: 2px 15%;
+    font-size: 70%;
+    background-color: yellow;
+    border: solid, black, 2px;
+    transition: 0.2s;
+}
+
+#submit:hover, #complite_button:hover {
+    transform: scale(1.1);
+}
+
+.submit_button {
+    margin: 3%;
+    padding: 2px 15%;
+    font-size: 70%;
+    background-color: yellow;
+    border: solid, black, 2px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.submit_button:hover {
+    transform: scale(1.1);
+}
+
+.button {
+    margin: 3%;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #08a029 0%, #c2f313 51%, #ff3806 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+.button:hover {
+    background-position: right center;
+}
+
+.flash.success {
+    background-color: rgb(22, 236, 22);
+    border: solid, green, 2px;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.flash.error {
+    background-color: red;
+    border: solid, rgb(114, 31, 16), 2px;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.flash.light_error {
+    background-color: rgb(109, 105, 105);
+    border: solid, rgb(48, 46, 46), 2px;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.add_note_button {
+    width: 50%;
+    font-size: 250%;
+    background-color: aqua;
+    padding: 1%;
+    margin: 2%;
+    margin-bottom: 0%;
+    border: solid, black;
+    transition: 0.2s;
+}
+
+.add_note_button:hover {
+    transform: scale(1.1);
+}
+
+.my_notes {
+    border-radius: 20px;
+    border: solid, black;
+    margin: 10% 20% 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 150%;
+    background-color: aqua;
+    min-width: 100px;
+}
+
+.note {
+    border-radius: 10px;
+    border: solid, black;
+    background-color: #FF9933;
+    width: 76%;
+    margin-left: 12%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.note_text {
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.all_datas_text {
+    text-align: left;
+    font-size: 80%;
+    margin: 2%;
+    line-height: 120%;
+}
