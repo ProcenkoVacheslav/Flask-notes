@@ -94,6 +94,20 @@
     transform: scale(1.1);
 }
 
+.submit_button_index {
+    padding: 2px 10%;
+    font-size: 70%;
+    background-color: yellow;
+    border: solid, black, 2px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.submit_button_index:hover {
+    transform: scale(1.1);
+}
+
 .button {
     margin: 3%;
     text-decoration: none;
